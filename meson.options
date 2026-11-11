@@ -1,0 +1,1 @@
+option('native_dir', type: 'string', value: 'target/release', description: 'Directory containing the Cargo-built native library')

@@ -1,0 +1,15 @@
+@PACKAGE_INIT@
+if(NOT TARGET OrbitC::orbit)
+  find_library(OrbitC_LIBRARY NAMES claviron_orbit PATHS "${PACKAGE_PREFIX_DIR}/@CMAKE_INSTALL_LIBDIR@" NO_DEFAULT_PATH REQUIRED)
+  add_library(OrbitC::orbit UNKNOWN IMPORTED)
+  set_target_properties(OrbitC::orbit PROPERTIES IMPORTED_LOCATION "${OrbitC_LIBRARY}"
+    INTERFACE_INCLUDE_DIRECTORIES "${PACKAGE_PREFIX_DIR}/@CMAKE_INSTALL_INCLUDEDIR@/claviron")
+  if(OrbitC_LIBRARY MATCHES "\\.a$")
+    string(REGEX REPLACE "-framework +([^ ]+)" "-Wl,-framework,\\1"
+      _orbit_link_flags "@ORBIT_STATIC_LINK_FLAGS@")
+    separate_arguments(_orbit_link_flags UNIX_COMMAND "${_orbit_link_flags}")
+    set_property(TARGET OrbitC::orbit PROPERTY INTERFACE_LINK_LIBRARIES "${_orbit_link_flags}")
+    unset(_orbit_link_flags)
+  endif()
+endif()
+check_required_components(OrbitC)

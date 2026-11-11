@@ -1,0 +1,10 @@
+prefix=${pcfiledir}/../..
+libdir=${prefix}/@CMAKE_INSTALL_LIBDIR@
+includedir=${prefix}/@CMAKE_INSTALL_INCLUDEDIR@/claviron
+
+Name: Orbit C
+Description: C ABI for Orbit HTTP and message-session applications
+Version: @PROJECT_VERSION@
+Libs: -L${libdir} -lclaviron_orbit
+Libs.private: @ORBIT_STATIC_LINK_FLAGS@
+Cflags: -I${includedir}

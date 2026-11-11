@@ -1,0 +1,8 @@
+orbit-c provides a CMake target:
+
+    find_package(OrbitC CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE OrbitC::orbit)
+
+orbit-c provides pkg-config metadata:
+
+    orbit-c

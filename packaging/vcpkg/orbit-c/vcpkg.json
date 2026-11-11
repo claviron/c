@@ -1,0 +1,14 @@
+{
+  "name": "orbit-c",
+  "version": "0.1.0",
+  "description": "C and C++ applications over Claviron Orbit Link",
+  "homepage": "https://github.com/claviron/c",
+  "license": "MIT OR Apache-2.0",
+  "supports": "(osx & arm64) | ((linux | freebsd) & (x64 | arm64))",
+  "dependencies": [
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    }
+  ]
+}
