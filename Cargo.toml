@@ -1,6 +1,6 @@
 [package]
 name = "claviron-orbit-c"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2024"
 rust-version = "1.98"
 publish = false
@@ -17,7 +17,7 @@ name = "claviron_orbit"
 crate-type = ["cdylib", "staticlib", "rlib"]
 
 [dependencies]
-claviron = { version = "=0.2.1", default-features = false, features = ["orbit", "application"] }
+claviron = { version = "=0.2.2", default-features = false, features = ["orbit", "application"] }
 tokio = { version = "1", features = ["rt-multi-thread", "net", "sync", "macros", "io-util"] }
 tokio-util = { version = "0.7", features = ["rt"] }
 http = "1"

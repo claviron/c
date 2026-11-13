@@ -4,7 +4,7 @@ Write C or C++ applications over Orbit Link. Register HTTP, WebSocket or
 WebTransport message handlers; the library handles native I/O, completions
 and application lifecycle.
 
-Orbit C `0.1.1` uses C ABI 5 and targets Claviron `0.2.1`.
+Orbit C `0.1.2` uses C ABI 5 and targets Claviron `0.2.2`.
 
 ## Handlers
 
