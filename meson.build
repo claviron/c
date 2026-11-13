@@ -1,4 +1,4 @@
-project('orbit-c', 'c', version: '0.1.0', meson_version: '>=1.1', default_options: ['c_std=c11'])
+project('orbit-c', 'c', version: '0.1.1', meson_version: '>=1.1', default_options: ['c_std=c11'])
 
 cc = meson.get_compiler('c')
 native_dir = get_option('native_dir')

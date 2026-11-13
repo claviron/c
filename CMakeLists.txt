@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
-project(OrbitC VERSION 0.1.0 LANGUAGES C)
+project(OrbitC VERSION 0.1.1 LANGUAGES C)
 include(GNUInstallDirs)
 include(CMakePackageConfigHelpers)
 
